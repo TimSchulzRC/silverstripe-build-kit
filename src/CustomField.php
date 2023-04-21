@@ -13,15 +13,9 @@ class CustomField extends FieldGroup
 
     protected $schemaComponent = 'CustomField';
 
-    /**
-     * @var TextField
-     */
-    private $textField;
+    private TextField $textField;
 
-    /**
-     * @var DropdownField
-     */
-    private $dropdownField;
+    private DropdownField $dropdownField;
 
     public function __construct(
         string $name,
@@ -38,6 +32,16 @@ class CustomField extends FieldGroup
 
         $this->addExtraClass('text-dropdown-field');
         parent::__construct($title, $fields);
+    }
+
+    public function getTextField(): TextField
+    {
+        return $this->textField;
+    }
+
+    public function getDropdownField(): DropdownField
+    {
+        return $this->dropdownField;
     }
 
     public function getSchemaStateDefaults()
