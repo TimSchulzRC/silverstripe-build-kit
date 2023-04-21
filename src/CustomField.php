@@ -11,7 +11,7 @@ class CustomField extends FieldGroup
 {
     protected $schemaDataType = FormField::SCHEMA_DATA_TYPE_CUSTOM;
 
-    protected $schemaComponent = 'TextDropdownField';
+    protected $schemaComponent = 'CustomField';
 
     /**
      * @var TextField
