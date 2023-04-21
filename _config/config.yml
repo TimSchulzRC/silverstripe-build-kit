@@ -3,4 +3,4 @@ Name: customfield
 ---
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_javascript:
-    - "timschulzrc/silverstripe-build-kit:client/dist/js/bundle.js"
+    - "timschulzrc/silverstripe-build-kit/client/dist/js/bundle.js"
