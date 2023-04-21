@@ -2,6 +2,11 @@
 
 namespace TimSchulzRC\CustomField;
 
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\FieldGroup;
+use SilverStripe\Forms\FormField;
+use SilverStripe\Forms\TextField;
+
 class CustomField extends FieldGroup
 {
     protected $schemaDataType = FormField::SCHEMA_DATA_TYPE_CUSTOM;
