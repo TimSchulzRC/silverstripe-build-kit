@@ -19,18 +19,22 @@ class CustomField extends FieldGroup
 
     public function __construct(
         string $name,
-        ?string $title = null,
+        string $title,
         string $textRelation,
         string $dropdownRelation,
         array $dropdownSource
     ) {
+        $this->textField = TextField::create($textRelation);
+        $this->dropdownField = DropdownField::create($dropdownRelation)->setSource($dropdownSource);
+
         $fields = [
-            $this->textField = TextField::create($textRelation),
-            $this->dropdownField = DropdownField::create($dropdownRelation)
-                ->setSource($dropdownSource)
+            $this->textField,
+            $this->dropdownField,
         ];
 
+        $this->setName($name)->setValue('');
         $this->addExtraClass('text-dropdown-field');
+
         parent::__construct($title, $fields);
     }
 
@@ -49,6 +53,7 @@ class CustomField extends FieldGroup
         $state = parent::getSchemaStateDefaults();
         $state['textField'] = $this->textField->getSchemaState();
         $state['dropdownField'] = $this->dropdownField->getSchemaState();
+
         return $state;
     }
 }
