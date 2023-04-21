@@ -10,4 +10,8 @@ class CustomField extends FieldGroup
     protected $schemaDataType = FormField::SCHEMA_DATA_TYPE_CUSTOM;
 
     protected $schemaComponent = 'CustomField';
+
+    public function __construct() {
+        $this->addExtraClass('custom-field')
+    }
 }
