@@ -9,10 +9,7 @@ jQuery.entwine("ss", ($) => {
       const Component = loadComponent("CustomField");
       const schemaState = this.data("state");
 
-      ReactDOM.render(
-        <Component {...schemaState} onAutofill={setValue} />,
-        this[0]
-      );
+      ReactDOM.render(<Component {...schemaState} />, this[0]);
     },
 
     onunmatch() {
