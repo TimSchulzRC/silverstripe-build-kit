@@ -1,8 +1,9 @@
 <?php
 
-namespace src;
+namespace TimSchulzRC\CustomField;
 
-class CustomField extends FieldGroup {
+class CustomField extends FieldGroup
+{
     protected $schemaDataType = FormField::SCHEMA_DATA_TYPE_CUSTOM;
 
     protected $schemaComponent = 'TextDropdownField';
