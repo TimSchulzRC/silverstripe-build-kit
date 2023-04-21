@@ -7,9 +7,8 @@ jQuery.entwine("ss", ($) => {
   $(".js-injector-boot .form__field-holder .custom-field").entwine({
     onmatch() {
       const Component = loadComponent("CustomField");
-      const schemaState = this.data("state");
 
-      ReactDOM.render(<Component {...schemaState} />, this[0]);
+      ReactDOM.render(<Component />, this[0]);
     },
 
     onunmatch() {
